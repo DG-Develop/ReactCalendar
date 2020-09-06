@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$blue-color: #0860a3;
+$white: #ffffff;
+$gray-dark: #7c8082;
+$color-accent: #053b63;
+$gray-secondary: #b8b9ba;
+
+.Calendar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Mulish", sans-serif;
+}
+
+@mixin marginHeader {
+  padding: 10px 0;
+}
+
+.Calendar__container {
+  position: relative;
+  top: 10rem;
+  background-color: #ffffff;
+  width: 500px;
+  height: 300px;
+  border-radius: 8px;
+  display: flex;
+}
+
+
+

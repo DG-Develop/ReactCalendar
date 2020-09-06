@@ -1,0 +1,125 @@
+$blue-color: #0860a3;
+$white: #ffffff;
+$gray-dark: #7c8082;
+$color-accent: #053b63;
+$gray-secondary: #b8b9ba;
+
+@mixin marginHeader {
+  padding: 10px 0;
+}
+
+.Calendar__dates {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.Calendar__title {
+  @include marginHeader;
+
+  background-color: $blue-color;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 8px 0 0;
+
+  h3 {
+    color: $white;
+    margin: 0;
+    font-weight: 700;
+    font-size: 130%;
+  }
+
+  img{
+    cursor: pointer;
+  }
+}
+
+.Calendar__datesPicker {
+  height: 83%;
+}
+
+.Calendar__daysOfMonth {
+  display: inline-grid;
+  justify-items: center;
+  align-items: center;
+  padding: 2px 0;
+  width: 100%;
+  grid-template-columns: repeat(7, 1fr);
+  height: 87%;
+}
+
+.Calendar__daysOfMonth--text {
+  color: $gray-dark;
+  font-weight: 800;
+  margin: 0;
+}
+
+.Calendar__daysOfMonth--days {
+  width: 78%;
+  height: 93%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    color: $color-accent;
+    font-weight: 800;
+    box-sizing: border-box;
+    margin: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    border-radius: 50%;
+    background-color: $gray-secondary;
+    cursor: pointer;
+
+    button {
+      color: $white;
+    }
+  }
+
+  &:active {
+    border-radius: 50%;
+    background-color: $blue-color;
+
+    h5 {
+      color: $white;
+    }
+  }
+}
+
+.Calendar__daysOfMonth--check {
+  background: $blue-color;
+  border-radius: 50%;
+  button {
+    color: $white;
+  }
+}
+
+.Calendar__daysOfMonth--daysOff {
+  color: $gray-secondary;
+  font-weight: 800;
+  margin: 0;
+}
+
+.Calendar__dates--button {
+  border-top: 1px solid $blue-color;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: $blue-color;
+  font-weight: 700;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 0 0 8px 0;
+
+  &:hover{
+    background: $gray-secondary;
+    color: $white;
+  }
+}
